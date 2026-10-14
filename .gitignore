@@ -1,0 +1,4 @@
+# Archivos que genera Python/pytest: nunca se suben
+__pycache__/
+*.pyc
+.pytest_cache/
