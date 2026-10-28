@@ -18,6 +18,10 @@ HOY = date(2026, 10, 13)
 def test_calcular_edad():
     assert calcular_edad(date(1980, 3, 15), hoy=HOY) == 46
 
+def test_calcular_edad_antes_del_cumple():
+    # Nació el 20/11/2011: el 13/10/2026 todavía tiene 14 años, no 15.
+    assert calcular_edad(date(2011, 11, 20), hoy=HOY) == 14
+
 
 def test_es_pediatrico():
     assert es_pediatrico(date(2020, 1, 10), hoy=HOY)
