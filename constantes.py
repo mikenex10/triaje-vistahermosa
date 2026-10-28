@@ -9,7 +9,12 @@ def calcular_edad(fecha_nacimiento, hoy=None):
     """Devuelve la edad del paciente en años cumplidos."""
     if hoy is None:
         hoy = date.today()
-    return hoy.year - fecha_nacimiento.year
+    if hoy.month>fecha_nacimiento.month:
+         return hoy.year - fecha_nacimiento.year
+    else:
+        return hoy.year - fecha_nacimiento.year-1
+
+   
 
 
 def es_pediatrico(fecha_nacimiento, hoy=None):
