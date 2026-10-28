@@ -17,8 +17,10 @@ FC_BRADICARDIA = 50
 FC_TAQUICARDIA = 100
 
 # --- Tensión arterial (mmHg) ---
+
 TA_SISTOLICA_ALTA = 135
 TA_DIASTOLICA_ALTA = 85
+
 
 
 # --- Saturación de oxígeno (SpO2 %) ---
@@ -26,4 +28,4 @@ SPO2_BAJA = 94
 SPO2_HIPOXEMIA = 91
 
 # --- Registro de triaje ---
-CONSTANTES_OBLIGATORIAS = ["temperatura", "frecuencia_cardiaca", "tension", "dolor"]
+CONSTANTES_OBLIGATORIAS = ["temperatura", "frecuencia_cardiaca", "tension", "dolor", "saturacion"]
