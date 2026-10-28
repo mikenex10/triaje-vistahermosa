@@ -42,3 +42,12 @@ def clasificar_tension(sistolica, diastolica):
     if sistolica < 90 or diastolica < 60:
         return "hipotension"
     return "normal"
+
+
+def clasificar_saturacion(spo2):
+    """Clasifica la saturación de oxígeno (pulsioximetría, %)."""
+    if spo2 <= config.SPO2_HIPOXEMIA:
+        return "hipoxemia"
+    if spo2 <= config.SPO2_BAJA:
+        return "baja"
+    return "normal"

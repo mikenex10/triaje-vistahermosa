@@ -9,6 +9,7 @@ from constantes import (
     clasificar_temperatura,
     clasificar_tension,
     es_pediatrico,
+    clasificar_saturacion
 )
 
 HOY = date(2026, 10, 13)
@@ -40,3 +41,9 @@ def test_clasificar_tension():
     assert clasificar_tension(110, config.TA_DIASTOLICA_ALTA) == "hipertension"
     assert clasificar_tension(config.TA_SISTOLICA_ALTA - 1, config.TA_DIASTOLICA_ALTA - 1) == "normal"
     assert clasificar_tension(85, 55) == "hipotension"
+
+
+def test_clasificar_saturacion():
+    assert clasificar_saturacion(98) == "normal"
+    assert clasificar_saturacion(93) == "baja"
+    assert clasificar_saturacion(89) == "hipoxemia"
